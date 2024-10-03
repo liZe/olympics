@@ -1,0 +1,12 @@
+[tool.setuptools]
+packages = []
+
+[project]
+name = 'olympics'
+version = '0.1'
+requires-python = '>=3.10'
+dependencies = [
+  'pytest',
+  'rich',
+  'fastapi[standard]',
+]
