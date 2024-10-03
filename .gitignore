@@ -1,0 +1,6 @@
+*.egg-info
+*.pyc
+.coverage
+.pytest_cache
+venv
+database/*
