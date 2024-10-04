@@ -6,7 +6,7 @@ def test_countries():
     assert len(rows) > 100
 
 def test_countries_avec_id():
-    rows = db.get_countries(id=1)
+    rows = db.get_countries(1)
     assert len(rows) == 1
        
 def test_athletes():
@@ -14,7 +14,7 @@ def test_athletes():
     assert len(rows) > 100
     
 def test_athletes_avec_id():
-    rows = db.get_athletes(id = 1)
+    rows = db.get_athletes(1)
     assert len(rows) == 1
     
 def test_disciplines():
@@ -22,7 +22,7 @@ def test_disciplines():
     assert len(rows) >= 39
     
 def test_disciplines_avec_id():
-    rows = db.get_disciplines(id = 1)
+    rows = db.get_disciplines(id)
     assert len(rows) == 1
     
 def test_teams():
@@ -30,7 +30,7 @@ def test_teams():
     assert len(rows) >= 45
     
 def test_teams_avec_id():
-    rows = db.get_teams(id = 1)
+    rows = db.get_teams(1)
     assert len(rows) == 1
     
 def test_events():
@@ -38,7 +38,7 @@ def test_events():
     assert len(rows) >= 45
     
 def test_events_avec_id():
-    rows = db.get_events(id = 1)
+    rows = db.get_events(1)
     assert len(rows) == 1
     
 def test_get_medals():
@@ -46,11 +46,11 @@ def test_get_medals():
     assert len(rows) >= 45
     
 def test_get_medals_avec_id():
-    rows = db.get_medals(id = 1)
+    rows = db.get_medals(1)
     assert len(rows) == 1
     
 def test_get_discipline_athletes_avec_id():
-    rows = db.get_discipline_athletes(discipline_id = 1)
+    rows = db.get_discipline_athletes(1)
     assert len(rows) == 291
 
 def test_get_collective_medals():
