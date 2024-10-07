@@ -22,7 +22,7 @@ def test_disciplines():
     assert len(rows) >= 39
     
 def test_disciplines_avec_id():
-    rows = db.get_disciplines(id)
+    rows = db.get_disciplines(id=1)
     assert len(rows) == 1
     
 def test_teams():
