@@ -278,3 +278,7 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
+
+Bug trouvé pour la db.py en utilisant la Cli
+
+Bug trouvé dans le code avec deux fois gold impactant le total dans le tableau
