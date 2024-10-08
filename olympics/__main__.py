@@ -16,7 +16,7 @@ parser.add_argument(
 parser.add_argument(
     '--top',
     help='number of top elements to display',
-    type=float,
+    type=int,
     default=10,
 )
 
