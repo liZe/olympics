@@ -187,7 +187,7 @@ def get_top_countries(top=10):
         GROUP BY country.id
         ORDER BY gold DESC, silver DESC, bronze DESC
         LIMIT ?
-    ''', (10,)).fetchall()
+    ''', (top,)).fetchall()
     cursor.close()
     return rows
 
@@ -283,7 +283,7 @@ def get_individual_medals(athlete_id=None):
 
 def get_top_individual(top=10):
     """Get medal count ranking of athletes for individual events.
-
+python3 -m pytest --cov=myapplication
     Number of athletes is limited to the given top number.
 
     """
