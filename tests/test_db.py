@@ -85,6 +85,13 @@ def test_get_top_individual_with_team_id():
     rows = db.get_top_individual(1)
     assert len(rows) == 1
     
+def test_get_top_countries():
+    rows = db.get_top_countries(top=5)
+    assert len(rows) == 5, "Le nombre de pays retournés devrait être égal à 5"
+
+    rows = db.get_top_countries(top=3)
+    assert len(rows) == 3, "Le nombre de pays retournés devrait être égal à 3"
+    
 
     
     

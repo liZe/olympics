@@ -284,3 +284,16 @@ Bug trouvé pour la db.py en utilisant la Cli.
 Bug trouvé dans le code avec deux fois gold impactant le total dans le tableau.
 
 Bug trouvé dans le code api.py, la fonction retourne les données des événements collectifs au lieu des événements individuels.
+
+Bug trouvé dans le main.py ou un nombre "float" est présent alors qu'on essaie de le convertir en int dans le main.
+
+7. Cette technique s'appelle la gestion de fichiers, ici le paramètre "file" permet de dirigier la sortie de la commande cli dans le console, mais elle peut aussi être diriger vers un fichier.
+
+8. Le commentaire # pragma: no cover permet d'indiquer d’ignorer certaines lignes lors du calcul de la couverture de test. Ainsi même si ces lignes ne sont pas exécutées pendant les tests, elles ne seront pas comptabilisées comme des lignes non couvertes.
+
+9. Même si j'obtiens une couverture de test à 100% ce n'est pas suffisant pour dire que le code est parfait car en effet il pourrait ne pas fonctionner selon certaines utilisations, il faudrait faire d'autres tests comme par exemple pour tester les performances , la sécurité du code ou d'autres de régression pour vérifier que les nouveautées n'introduisent pas de bug ou encore des tests à grande de charge pour voir si le système supporte un grand nombre de personnes ou alors des tests unitaires pour tester des fonctions isolées, pratiques pour un code chargé.
+
+10. Les tests dans un certain ordre pour d’abord s’assurer que tout le code est couvert à 100%. Cela permet de vérifier que chaque partie du code est testée au moins une fois. Ensuite, en regroupant la correction d’un bug et le test qui vérifie que ce bug ne revient pas dans un même commit, on peut facilement voir quelle correction est associée à quel test. Cela aide à garder une trace claire des changements et à s’assurer que les bugs corrigés ne réapparaissent pas. En gros, c’est une façon de rendre le code plus fiable et bien documenté.
+
+
+Avec cette dernière question je comprends mieux le test de non-régression et me rend compte que certains bug corrigés non pas eté commités avec un bon test de non régression pensant devoir tester avec le cmd.
