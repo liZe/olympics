@@ -22,7 +22,7 @@ parser.add_argument(
 parser.add_argument(
     '--query',
     help='Search query for countries (required for search command)',
-    required=False, 
+    required=False,
 )
 
 def main(argv=None):

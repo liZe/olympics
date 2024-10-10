@@ -62,7 +62,7 @@ def top_individual(top=10, file=None):
 
     console = Console(file=file)
     console.print(table)
-    
+
 def search_countries(query, file=None):
     table = Table(title=f"Search results for '{query}'")
 

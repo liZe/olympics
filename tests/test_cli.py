@@ -2,13 +2,13 @@ from io import StringIO
 
 from olympics import cli
 
-    
+
 def test_top_collective():
     output = StringIO()
     cli.top_collective(file=output)
     result = output.getvalue()
     assert 'Top' in result
-    
+
 def test_top_individual():
     output = StringIO()
     cli.top_individual(top=10, file=output)

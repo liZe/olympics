@@ -14,3 +14,8 @@ dependencies = [
 
 [tool.pytest.ini_options]
 addopts = "--cov=olympics --cov=tests --cov-report=term-missing"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C90"]
+ignore = ["E501"]
