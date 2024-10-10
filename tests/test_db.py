@@ -94,11 +94,11 @@ def test_get_top_countries():
     
 
 def test_search_countries():
-    result = search_countries("uga")
-    assert "Uganda" in result
-    assert "Portugal" in result
+    result = search_countries("an")
+    assert "France" in result
+    assert "Germany" in result
+    assert "Lebanon" in result
 
-    
     
     
 

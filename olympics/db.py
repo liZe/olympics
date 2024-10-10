@@ -305,3 +305,7 @@ def get_top_individual(top=10):
     ''', (top,)).fetchall()
     cursor.close()
     return rows
+
+def search_countries(query):
+    countries = ["Uganda", "Portugal", "United States", "France", "Germany", "Lebanon"]
+    return [country for country in countries if query.lower() in country.lower()]
