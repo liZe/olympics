@@ -187,7 +187,11 @@ def get_top_countries(top=10):
         GROUP BY country.id
         ORDER BY gold DESC, silver DESC, bronze DESC
         LIMIT ?
+
     ''', (top,)).fetchall()
+
+    ''', (10,)).fetchall()
+
     cursor.close()
     return rows
 
@@ -306,6 +310,9 @@ def get_top_individual(top=10):
     cursor.close()
     return rows
 
+
 def search_countries(query):
     countries = ["Uganda", "Portugal", "United States", "France", "Germany", "Lebanon"]
     return [country for country in countries if query.lower() in country.lower()]
+
+

@@ -279,6 +279,7 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
 
+
 4. 5. 6. Bug trouvés : 
 -Bug trouvé pour la db.py en utilisant la Cli.
 -Bug trouvé dans le code avec deux fois gold impactant le total dans le tableau.
@@ -295,4 +296,5 @@ ajoutez-les à la fin de ce fichier.
 
 //
 Avec cette dernière question je comprends mieux le test de non-régression et me rend compte que certains bug corrigés non pas eté commités avec un bon test de non régression pensant devoir tester avec le cmd.
+
 

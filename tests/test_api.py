@@ -1,12 +1,23 @@
 from fastapi.testclient import TestClient
+
 from olympics import api
 
 client = TestClient(api.app)
+
+
+
+from olympics import api
+
+
+client = TestClient(api.app)
+
+
 
 def test_countries():
     response = client.get('/countries/')
     assert response.status_code == 200
     assert len(response.json()) > 100
+
 
 def test_athletes():
     response = client.get('/athletes/')
@@ -65,4 +76,5 @@ def test_top_individual():
     response = client.get('/top-individual/')
     assert response.status_code == 200
     assert len(response.json()) > 5
+
 

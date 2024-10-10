@@ -1,6 +1,10 @@
 """CLI public options."""
 
 import argparse
+
+
+
+
 from . import cli
 
 parser = argparse.ArgumentParser(
@@ -10,11 +14,16 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     'command',
     help='command to launch',
+
     choices=('countries', 'collective', 'individual','search'),
+
+    choices=('countries', 'collective', 'individual'),
+
 )
 parser.add_argument(
     '--top',
     help='number of top elements to display',
+
     type=int,
     default=10,
 )
@@ -24,6 +33,12 @@ parser.add_argument(
     help='Search query for countries (required for search command)',
     required=False,
 )
+
+
+    type=float,
+    default=10,
+)
+
 
 def main(argv=None):
     args = parser.parse_args(argv)
@@ -36,10 +51,12 @@ def main(argv=None):
             cli.top_collective(top)
         case 'individual':
             cli.top_individual(top)
+
         case 'search':
             if not args.query:
                 raise argparse.ArgumentTypeError('query is required for search command')
             cli.search_countries(args.query)
+
 
 
 if __name__ == '__main__':  # pragma: no cover
