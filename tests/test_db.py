@@ -98,6 +98,7 @@ def test_search_countries():
     assert "France" in result
     assert "Germany" in result
     assert "Lebanon" in result
+    assert "Uganda" in result
 
     
     

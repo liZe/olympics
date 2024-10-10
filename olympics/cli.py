@@ -62,3 +62,14 @@ def top_individual(top=10, file=None):
 
     console = Console(file=file)
     console.print(table)
+    
+def search_countries(query, file=None):
+    table = Table(title=f"Search results for '{query}'")
+
+    table.add_column('Country')
+
+    for country in db.search_countries(query):
+        table.add_row(country)
+
+    console = Console(file=file)
+    console.print(table)

@@ -36,3 +36,13 @@ def test_top_non_positive():
 
     with pytest.raises(argparse.ArgumentTypeError):
         main(['countries', '--top', '0'])  
+        
+# test pour 'search' avec --query valide
+def test_search_valid_query():
+    argv = ['search', '--query', 'uga']
+    main(argv)
+
+# test pour 'search' sans --query
+def test_search_missing_query():
+    with pytest.raises(argparse.ArgumentTypeError):
+        main(['search'])  # Appel sans --query
