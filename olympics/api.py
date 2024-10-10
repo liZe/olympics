@@ -130,3 +130,12 @@ def top_individual(top: int | None = 10):
 
     """
     return db.get_top_individual(top)
+
+@app.get("/search-countries/")
+def get_search_countries(query: str):
+    """Search for countries by name.
+
+    Returns a list of countries that match the query string.
+
+    """
+    return db.search_countries(query)
