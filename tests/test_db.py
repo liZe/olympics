@@ -1,5 +1,5 @@
 from olympics import db
-
+from olympics.db import search_countries
 
 def test_countries():
     rows = db.get_countries()
@@ -93,7 +93,11 @@ def test_get_top_countries():
     assert len(rows) == 3, "Le nombre de pays retournés devrait être égal à 3"
     
 
-    
+def test_search_countries():
+    result = search_countries("uga")
+    assert "Uganda" in result
+    assert "Portugal" in result
+
     
     
     

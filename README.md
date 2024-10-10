@@ -250,7 +250,7 @@ lève une exception, on peut considérer cela comme un bug.
 ### Ajoutez une fonction en TDD (optionnel)
 
 Ajoutez une fonction en suivant la méthode TDD. Vous pouvez créer un système de
-recherche de pays par leur nom : rechercher « ugu » trouvera par exemple
+recherche de pays par leur nom : rechercher « uga » trouvera par exemple
 « Portugal » et « Uganda ».
 
 À chaque fois, écrivez un test qui ne passe pas, commitez-le, puis ajoutez le
@@ -278,14 +278,12 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
-.
-Bug trouvé pour la db.py en utilisant la Cli.
 
-Bug trouvé dans le code avec deux fois gold impactant le total dans le tableau.
-
-Bug trouvé dans le code api.py, la fonction retourne les données des événements collectifs au lieu des événements individuels.
-
-Bug trouvé dans le main.py ou un nombre "float" est présent alors qu'on essaie de le convertir en int dans le main.
+4. 5. 6. Bug trouvés : 
+-Bug trouvé pour la db.py en utilisant la Cli.
+-Bug trouvé dans le code avec deux fois gold impactant le total dans le tableau.
+-Bug trouvé dans le code api.py, la fonction retourne les données des événements collectifs au lieu des événements individuels.
+-Bug trouvé dans le main.py ou un nombre "float" est présent alors qu'on essaie de le convertir en int dans le main.
 
 7. Cette technique s'appelle la gestion de fichiers, ici le paramètre "file" permet de dirigier la sortie de la commande cli dans le console, mais elle peut aussi être diriger vers un fichier.
 
@@ -295,5 +293,6 @@ Bug trouvé dans le main.py ou un nombre "float" est présent alors qu'on essaie
 
 10. Les tests dans un certain ordre pour d’abord s’assurer que tout le code est couvert à 100%. Cela permet de vérifier que chaque partie du code est testée au moins une fois. Ensuite, en regroupant la correction d’un bug et le test qui vérifie que ce bug ne revient pas dans un même commit, on peut facilement voir quelle correction est associée à quel test. Cela aide à garder une trace claire des changements et à s’assurer que les bugs corrigés ne réapparaissent pas. En gros, c’est une façon de rendre le code plus fiable et bien documenté.
 
-
+//
 Avec cette dernière question je comprends mieux le test de non-régression et me rend compte que certains bug corrigés non pas eté commités avec un bon test de non régression pensant devoir tester avec le cmd.
+
