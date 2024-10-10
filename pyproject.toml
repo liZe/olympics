@@ -9,6 +9,7 @@ dependencies = [
   'pytest',
   'rich',
   'fastapi[standard]',
+
   'pytest-cov'
 ]
 
@@ -19,3 +20,5 @@ addopts = "--cov=olympics --cov=tests --cov-report=term-missing"
 line-length = 88
 select = ["E", "F", "W", "C90"]
 ignore = ["E501"]
+]
+

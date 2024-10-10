@@ -23,6 +23,8 @@ parser.add_argument(
     '--query',
     help='Search query for countries (required for search command)',
     required=False,
+    type=float,
+    default=10,
 )
 
 def main(argv=None):

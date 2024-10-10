@@ -21,7 +21,11 @@ def top_countries(top=10, file=None):
             str(row['gold']),
             str(row['silver']),
             str(row['bronze']),
+
             str(row['gold'] + row['silver'] + row['bronze']),
+
+            str(row['gold'] + row['silver'] + row['gold']),
+
         )
 
     console = Console(file=file)
@@ -63,6 +67,7 @@ def top_individual(top=10, file=None):
     console = Console(file=file)
     console.print(table)
 
+
 def search_countries(query, file=None):
     table = Table(title=f"Search results for '{query}'")
 
@@ -73,3 +78,4 @@ def search_countries(query, file=None):
 
     console = Console(file=file)
     console.print(table)
+

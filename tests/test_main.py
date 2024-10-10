@@ -1,10 +1,13 @@
 from olympics.__main__ import main
+
 import pytest
 import argparse
+
 
 def test_countries():
     argv = ['countries']
     main(argv)
+
 
 
 def test_collective():
@@ -46,3 +49,4 @@ def test_search_valid_query():
 def test_search_missing_query():
     with pytest.raises(argparse.ArgumentTypeError):
         main(['search'])  # Appel sans --query
+

@@ -1,9 +1,12 @@
 from olympics import db
+
 from olympics.db import search_countries
+
 
 def test_countries():
     rows = db.get_countries()
     assert len(rows) > 100
+
 
 def test_countries_avec_id():
     rows = db.get_countries(1)
@@ -99,8 +102,4 @@ def test_search_countries():
     assert "Germany" in result
     assert "Lebanon" in result
     assert "Uganda" in result
-
-
-
-
 
