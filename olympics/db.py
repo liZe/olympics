@@ -189,9 +189,6 @@ def get_top_countries(top=10):
         LIMIT ?
 
     ''', (top,)).fetchall()
-
-    ''', (10,)).fetchall()
-
     cursor.close()
     return rows
 
